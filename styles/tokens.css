@@ -20,7 +20,7 @@
   --line-soft: #e8e0d1;
 
   /* Type */
-  --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
+  --font-display: "Source Serif 4", "Iowan Old Style", Georgia, serif;
   --font-body: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
   --step--1: clamp(0.83rem, 0.8rem + 0.15vw, 0.92rem);
