@@ -168,7 +168,7 @@
 .flow {
   margin-top: var(--space-l);
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: var(--space-s);
   counter-reset: flow;
 }
@@ -186,6 +186,10 @@
 .flow__label { font-family: var(--font-display); font-size: var(--step-1); }
 .flow__label em { color: var(--accent); font-style: normal; }
 .flow__desc { color: var(--ink-soft); font-size: var(--step--1); }
+
+@media (max-width: 1180px) {
+  .flow { grid-template-columns: repeat(3, 1fr); }
+}
 
 @media (max-width: 880px) {
   .flow { grid-template-columns: 1fr; }
