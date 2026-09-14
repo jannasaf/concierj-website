@@ -1,0 +1,166 @@
+/* ============================================================
+   ConcierjWidget — reusable chat launcher + panel component.
+   This is a PLACEHOLDER UI shell. The real Concierj chat product
+   gets embedded inside [data-concierj-body] later without
+   touching this markup or the launcher.
+   ============================================================ */
+
+.concierj-widget-launcher {
+  position: fixed;
+  right: var(--space-m);
+  bottom: var(--space-m);
+  z-index: 90;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6em;
+  padding: 0.9em 1.4em;
+  background: var(--ab-ink, var(--ink));
+  color: var(--ab-paper, var(--paper));
+  border: none;
+  border-radius: 999px;
+  font-family: var(--font-body);
+  font-size: var(--step--1);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  box-shadow: 0 18px 40px -14px rgba(0,0,0,0.45);
+  transition: transform 0.3s var(--ease), background 0.3s var(--ease);
+}
+.concierj-widget-launcher:hover { transform: translateY(-2px); background: var(--ab-brass-dark, var(--accent-dark)); }
+.concierj-widget-launcher__dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: #8fd0a0;
+  box-shadow: 0 0 0 3px rgba(143,208,160,0.25);
+}
+.concierj-widget-launcher.is-hidden { transform: translateY(120%); opacity: 0; pointer-events: none; }
+
+.concierj-widget-panel {
+  position: fixed;
+  z-index: 95;
+  right: var(--space-m);
+  bottom: var(--space-m);
+  width: min(420px, calc(100vw - 2 * var(--space-m)));
+  height: min(640px, calc(100vh - 2 * var(--space-m)));
+  background: var(--ab-paper, var(--paper));
+  border-radius: 14px;
+  box-shadow: 0 40px 90px -20px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transform: translateY(24px) scale(0.98);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.3s var(--ease), opacity 0.3s var(--ease);
+}
+.concierj-widget-panel.is-open {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.concierj-widget-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-s) var(--space-m);
+  background: var(--ab-ink, var(--ink));
+  color: var(--ab-paper, var(--paper));
+}
+.concierj-widget-panel__title { display: flex; flex-direction: column; }
+.concierj-widget-panel__title strong { font-family: var(--ab-font-display, var(--font-display)); font-size: var(--step-1); font-weight: 500; }
+.concierj-widget-panel__title span { font-size: 0.75rem; color: rgba(255,255,255,0.7); }
+.concierj-widget-panel__close {
+  background: none; border: none; color: inherit; cursor: pointer;
+  width: 32px; height: 32px; font-size: 1.3rem; line-height: 1;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+}
+.concierj-widget-panel__close:hover { background: rgba(255,255,255,0.15); }
+
+.concierj-widget-panel__body {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-m);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s);
+  background: var(--ab-sand, var(--sand));
+}
+
+.concierj-widget-bubble {
+  background: var(--ab-paper, var(--paper));
+  border: 1px solid var(--ab-line, var(--line));
+  border-radius: 12px;
+  border-top-left-radius: 3px;
+  padding: 0.85em 1em;
+  font-size: var(--step--1);
+  max-width: 92%;
+  line-height: 1.5;
+}
+
+.concierj-widget-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+}
+.concierj-widget-chip {
+  border: 1px solid var(--ab-line, var(--line));
+  background: var(--ab-paper, var(--paper));
+  border-radius: 999px;
+  padding: 0.55em 1em;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+.concierj-widget-chip:hover { border-color: var(--ab-brass, var(--accent)); color: var(--ab-brass-dark, var(--accent-dark)); }
+
+.concierj-widget-placeholder-note {
+  margin-top: auto;
+  font-size: 0.75rem;
+  color: var(--ab-ink-soft, var(--ink-soft));
+  border-top: 1px dashed var(--ab-line, var(--line));
+  padding-top: var(--space-xs);
+}
+
+.concierj-widget-panel__footer {
+  padding: var(--space-s) var(--space-m);
+  border-top: 1px solid var(--ab-line, var(--line));
+  background: var(--ab-paper, var(--paper));
+}
+.concierj-widget-input {
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  background: var(--ab-sand, var(--sand));
+  border-radius: 999px;
+  padding: 0.6em 0.6em 0.6em 1.1em;
+}
+.concierj-widget-input input {
+  flex: 1;
+  border: none;
+  background: none;
+  font-family: var(--font-body);
+  font-size: var(--step--1);
+  color: var(--ab-ink-soft, var(--ink-soft));
+}
+.concierj-widget-input input:focus { outline: none; }
+.concierj-widget-input button {
+  border: none;
+  background: var(--ab-ink, var(--ink));
+  color: var(--ab-paper, var(--paper));
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+@media (max-width: 560px) {
+  .concierj-widget-panel {
+    right: var(--space-xs);
+    left: var(--space-xs);
+    bottom: var(--space-xs);
+    width: auto;
+    height: min(78vh, 640px);
+  }
+  .concierj-widget-launcher { right: var(--space-xs); bottom: var(--space-xs); }
+}

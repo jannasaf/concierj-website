@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Experience Concierj | Azure Bluff</title>
+  <meta name="description" content="Azure Bluff is a fictional boutique hotel built to demonstrate Concierj. Plan your stay the way a real prospective guest would — on the hotel's own website." />
+  <link rel="canonical" href="https://concierj.co/demo/" />
+  <meta name="robots" content="noindex, follow" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Azure Bluff" />
+  <meta property="og:title" content="Experience Concierj | Azure Bluff" />
+  <meta property="og:description" content="A fictional boutique hotel built to show what Concierj feels like on a real hotel website." />
+  <meta property="og:url" content="https://concierj.co/demo/" />
+  <meta property="og:image" content="https://concierj.co/assets/images/azure-bluff/hero-cliff-house.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Fraunces:opsz,wght@9..144,500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="/styles/tokens.css" />
+  <link rel="stylesheet" href="/styles/base.css" />
+  <link rel="stylesheet" href="/styles/demo.css" />
+  <link rel="stylesheet" href="/styles/widget.css" />
+</head>
+<body class="ab">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <div class="demo-banner">
+    You're exploring Azure Bluff, a fictional property built to demonstrate Concierj. <a href="/">← Back to Concierj</a>
+  </div>
+
+  <header class="ab-header" data-site-header>
+    <div class="wrap ab-header__row">
+      <a class="ab-logo" href="#main">Azure Bluff</a>
+
+      <nav class="ab-nav" data-nav-menu id="ab-nav">
+        <a href="#stay">Stay</a>
+        <a href="#dine">Dine</a>
+        <a href="#experience">Experience</a>
+        <a href="#wellness">Wellness</a>
+        <a href="#about">About</a>
+        <a class="btn btn-primary nav-cta" href="#stay">Book Your Stay</a>
+      </nav>
+
+      <button class="ab-nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="ab-nav">
+        <span class="visually-hidden">Menu</span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="ab-hero">
+      <div class="ab-hero__bg" style="background-image: url('/assets/images/azure-bluff/location-coast.jpg');" aria-hidden="true"></div>
+      <div class="wrap ab-hero__content">
+        <p class="ab-hero__eyebrow">Big Sur Coast, California</p>
+        <h1>Where the coast slows down.</h1>
+        <p class="ab-hero__sub">A coastal retreat designed around long mornings, open horizons, and the freedom to stay awhile.</p>
+
+        <form class="ab-search" aria-label="Check availability">
+          <div class="ab-search__field">
+            <label for="ab-checkin">Check in</label>
+            <input id="ab-checkin" type="date" />
+          </div>
+          <div class="ab-search__field">
+            <label for="ab-checkout">Check out</label>
+            <input id="ab-checkout" type="date" />
+          </div>
+          <div class="ab-search__field">
+            <label for="ab-guests">Guests</label>
+            <input id="ab-guests" type="text" value="2 Guests" />
+          </div>
+          <button class="btn btn-primary" type="submit">Check Availability</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- STAY / ROOMS -->
+    <section class="ab-section" id="stay">
+      <div class="wrap">
+        <div class="ab-section__head" data-reveal>
+          <p class="eyebrow">Stay</p>
+          <h2>Three ways to be here.</h2>
+          <p class="ab-section__lede">Each room faces the water. Beyond that, they're built for different kinds of quiet.</p>
+        </div>
+
+        <div class="grid-3" data-reveal>
+          <article class="stay-card">
+            <div class="stay-card__img" style="background-image:url('/assets/images/azure-bluff/room-bluff-king.jpg');" aria-hidden="true"></div>
+            <p class="stay-card__meta">Bluff King · Sleeps 2</p>
+            <h3>Bluff King</h3>
+            <p>A quiet room built around the view. King bed, a reading corner, and a soaking tub angled toward the horizon.</p>
+            <p class="stay-card__price">From $420 / night</p>
+          </article>
+
+          <article class="stay-card">
+            <div class="stay-card__img" style="background-image:url('/assets/images/azure-bluff/room-ocean-terrace-suite.jpg');" aria-hidden="true"></div>
+            <p class="stay-card__meta">Ocean Terrace Suite · Sleeps 2–3</p>
+            <h3>Ocean Terrace Suite</h3>
+            <p>A private terrace suspended over the bluff, so morning coffee and the view never have to be separate decisions.</p>
+            <p class="stay-card__price">From $610 / night</p>
+          </article>
+
+          <article class="stay-card">
+            <div class="stay-card__img" style="background-image:url('/assets/images/azure-bluff/room-azure-residence.jpg');" aria-hidden="true"></div>
+            <p class="stay-card__meta">Azure Residence · Sleeps 4–6</p>
+            <h3>Azure Residence</h3>
+            <p>Our largest stay — two bedrooms, a full kitchen, and a living room that opens straight onto the cliffside.</p>
+            <p class="stay-card__price">From $980 / night</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCES -->
+    <section class="ab-section ab-section--deep" id="experience">
+      <div class="wrap">
+        <div class="ab-section__head" data-reveal>
+          <p class="eyebrow">Experience</p>
+          <h2>Days built around the coast, not the clock.</h2>
+        </div>
+
+        <div class="grid-5" data-reveal>
+          <article class="exp-card">
+            <div class="exp-card__img" style="background-image:url('/assets/images/azure-bluff/experience-hiking.jpg');" aria-hidden="true"></div>
+            <h3>Coastal Hikes</h3>
+            <p>Guided routes along the bluff trail, timed for fog burn-off.</p>
+          </article>
+          <article class="exp-card">
+            <div class="exp-card__img" style="background-image:url('/assets/images/azure-bluff/experience-sailing.jpg');" aria-hidden="true"></div>
+            <h3>Sunset Sailing</h3>
+            <p>A quiet stretch of water and the last light of the day.</p>
+          </article>
+          <article class="exp-card">
+            <div class="exp-card__img" style="background-image:url('/assets/images/azure-bluff/experience-wine.jpg');" aria-hidden="true"></div>
+            <h3>Wine Tasting</h3>
+            <p>Small-lot pours from the vineyards fifteen minutes inland.</p>
+          </article>
+          <article class="exp-card">
+            <div class="exp-card__img" style="background-image:url('/assets/images/azure-bluff/experience-picnic.jpg');" aria-hidden="true"></div>
+            <h3>Private Beach Picnic</h3>
+            <p>A basket, a blanket, and a cove we'll point you toward.</p>
+          </article>
+          <article class="exp-card">
+            <div class="exp-card__img" style="background-image:url('/assets/images/azure-bluff/experience-surf.jpg');" aria-hidden="true"></div>
+            <h3>Surf Lessons</h3>
+            <p>Gentle breaks nearby, boards and wetsuits included.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DINE -->
+    <section class="ab-section" id="dine">
+      <div class="wrap">
+        <div class="ab-section__head" data-reveal>
+          <p class="eyebrow">Dine</p>
+          <h2>Two rooms, one kitchen.</h2>
+        </div>
+
+        <div class="dine-feature" data-reveal>
+          <div class="dine-feature__img" style="background-image:url('/assets/images/azure-bluff/dining-restaurant.jpg');" aria-hidden="true"></div>
+          <div>
+            <h3>Juniper</h3>
+            <p>Our dining room leans on the coast for its menu — the day's catch, produce from the inland valley, and a wood-fired hearth that runs most nights. Reservations lean toward guests, but we always hold a few tables back.</p>
+          </div>
+        </div>
+
+        <div class="dine-feature" data-reveal>
+          <div class="dine-feature__img" style="background-image:url('/assets/images/azure-bluff/dining-bar.jpg');" aria-hidden="true"></div>
+          <div>
+            <h3>The Bluff Bar</h3>
+            <p>A low-lit room for the hour between the beach and dinner. Local wine, a short cocktail list built around citrus and salt, and a fireplace that stays lit until the last guest leaves.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WELLNESS -->
+    <section class="ab-section ab-section--deep" id="wellness">
+      <div class="wrap">
+        <div class="ab-section__head" data-reveal>
+          <p class="eyebrow">Wellness</p>
+          <h2>Slower mornings, on purpose.</h2>
+        </div>
+
+        <div class="wellness-row" data-reveal>
+          <div class="wellness-row__img" style="background-image:url('/assets/images/azure-bluff/wellness-spa.jpg');" aria-hidden="true"></div>
+          <div>
+            <h3>The Bathhouse</h3>
+            <p>Two treatment rooms built around the sound of the water below — ocean-mineral soaks, a cedar sauna, and treatments drawn from the coast itself: kelp, salt, and eucalyptus grown on the property.</p>
+            <p style="margin-top: var(--space-s);">Sunrise yoga runs most mornings on the lower terrace, weather and tides permitting — no reservation needed, mats provided.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LOCATION / STORY -->
+    <section class="ab-section" id="about">
+      <div class="wrap">
+        <div class="story-row" data-reveal>
+          <div class="story-row__img" style="background-image:url('/assets/images/azure-bluff/about-story.jpg');" aria-hidden="true"></div>
+          <div>
+            <p class="eyebrow">About Azure Bluff</p>
+            <h2 style="font-size: var(--step-3); margin-bottom: var(--space-s);">Sixteen rooms, one stretch of coast.</h2>
+            <p class="ab-section__lede">Azure Bluff sits on eleven acres above the Pacific, built small on purpose. There's no ballroom, no conference center — just sixteen rooms, a dining room, a bathhouse, and a lot of coastline. Most of what guests remember happens off-property: a trail, a cove, a vineyard down the road. We just make sure they know it's there.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="ab-footer">
+    <div class="wrap ab-footer__row">
+      <div>
+        <p class="ab-logo" style="font-size: var(--step-2); color: var(--ab-sand);">Azure Bluff</p>
+        <p style="margin-top: var(--space-s); max-width: 34ch;">A small hotel on the Big Sur coast. Sixteen rooms, one dining room, and a lot of quiet.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#stay">Stay</a></li>
+          <li><a href="#dine">Dine</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#wellness">Wellness</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>This Is a Demo</h4>
+        <ul>
+          <li><a href="/">← Back to Concierj</a></li>
+          <li><a href="https://calendly.com/janna-concierj/30min">Talk About Your Property</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="wrap ab-footer__copy">
+      <span>Azure Bluff is a fictional property created to demonstrate Concierj.</span>
+      <span>© 2026 Concierj</span>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       ConcierjWidget — placeholder shell. See scripts/concierj-widget.js
+       ============================================================ -->
+  <div data-concierj-widget>
+    <button class="concierj-widget-launcher" data-concierj-launcher aria-haspopup="dialog" aria-controls="concierj-panel">
+      <span class="concierj-widget-launcher__dot" aria-hidden="true"></span>
+      Plan your stay
+    </button>
+
+    <div class="concierj-widget-panel" id="concierj-panel" data-concierj-panel role="dialog" aria-modal="true" aria-label="Plan your stay at Azure Bluff" aria-hidden="true">
+      <div class="concierj-widget-panel__header">
+        <div class="concierj-widget-panel__title">
+          <strong>Plan your stay</strong>
+          <span>Azure Bluff</span>
+        </div>
+        <button class="concierj-widget-panel__close" data-concierj-close aria-label="Close">&times;</button>
+      </div>
+
+      <div class="concierj-widget-panel__body" data-concierj-body>
+        <div class="concierj-widget-bubble">
+          Hello — I'm here to help you plan your stay at Azure Bluff. What brings you here?
+        </div>
+        <div class="concierj-widget-chips">
+          <button class="concierj-widget-chip" data-concierj-chip>An anniversary trip</button>
+          <button class="concierj-widget-chip" data-concierj-chip>A family getaway</button>
+          <button class="concierj-widget-chip" data-concierj-chip>Just exploring</button>
+        </div>
+        <p class="concierj-widget-placeholder-note">This panel is a placeholder — the Concierj chat product will be embedded here.</p>
+      </div>
+
+      <div class="concierj-widget-panel__footer">
+        <div class="concierj-widget-input">
+          <input type="text" placeholder="Type a message…" disabled />
+          <button type="button" aria-label="Send" disabled>→</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="/scripts/nav.js"></script>
+  <script src="/scripts/concierj-widget.js"></script>
+  <script src="/scripts/demo.js"></script>
+</body>
+</html>
