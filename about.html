@@ -38,10 +38,16 @@
       border-radius: 50%;
     }
     .founder { background: var(--sand-deep); padding: var(--space-xl) 0; }
-    .founder .wrap { max-width: var(--text-max); }
+    .founder .wrap { max-width: var(--content-max); }
+    .founder__row { display: grid; grid-template-columns: 220px 1fr; gap: var(--space-l); align-items: start; }
+    .founder__photo { width: 220px; height: 220px; object-fit: cover; border-radius: 6px; }
     .founder h2 { font-size: var(--step-2); margin-bottom: var(--space-s); }
-    .founder p { color: var(--ink-soft); font-size: var(--step-0); line-height: 1.7; }
+    .founder p { color: var(--ink-soft); font-size: var(--step-0); line-height: 1.7; max-width: var(--text-max); }
     .founder p + p { margin-top: var(--space-s); }
+    @media (max-width: 640px) {
+      .founder__row { grid-template-columns: 1fr; }
+      .founder__photo { width: 140px; height: 140px; }
+    }
   </style>
 </head>
 <body>
@@ -83,10 +89,13 @@
     </section>
 
     <section class="founder">
-      <div class="wrap">
-        <h2>About the founder</h2>
-        <p>Janna Safran holds a Master of Public Health from Columbia University, focused on systems and infrastructure strengthening — using data to understand how organizations operate, where they break down, and how to fix them.</p>
-        <p>Having traveled to more than twenty countries with a deep interest in guest experience and behavior, she has felt firsthand the intentionality that defines boutique hospitality — and the pre-booking gap that quietly undermines it. Concierj is the convergence of those two threads: systems thinking applied to an industry she knows personally.</p>
+      <div class="wrap founder__row">
+        <img class="founder__photo" src="/assets/images/concierj/janna-safran-founder.jpg" alt="Janna Safran, founder of Concierj" width="220" height="220" />
+        <div>
+          <h2>About the founder</h2>
+          <p>Janna Safran holds a Master of Public Health from Columbia University, focused on systems and infrastructure strengthening — using data to understand how organizations operate, where they break down, and how to fix them.</p>
+          <p>Having traveled to more than twenty countries with a deep interest in guest experience and behavior, she has felt firsthand the intentionality that defines boutique hospitality — and the pre-booking gap that quietly undermines it. Concierj is the convergence of those two threads: systems thinking applied to an industry she knows personally.</p>
+        </div>
       </div>
     </section>
 
