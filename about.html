@@ -28,6 +28,15 @@
     .about-hero h1 { font-size: var(--step-4); }
     .about-body { max-width: var(--text-max); display: grid; gap: var(--space-m); font-size: var(--step-1); color: var(--ink-soft); padding-bottom: var(--space-xl); }
     .about-body p { line-height: 1.7; }
+    .about-list { display: grid; gap: var(--space-xs); margin: 0; }
+    .about-list li { position: relative; padding-left: 1.4em; line-height: 1.7; }
+    .about-list li::before {
+      content: "";
+      position: absolute; left: 0; top: 0.6em;
+      width: 6px; height: 6px;
+      background: var(--accent);
+      border-radius: 50%;
+    }
     .founder { background: var(--sand-deep); padding: var(--space-xl) 0; }
     .founder .wrap { max-width: var(--text-max); }
     .founder h2 { font-size: var(--step-2); margin-bottom: var(--space-s); }
@@ -61,11 +70,16 @@
     </section>
 
     <section class="wrap about-body">
-      <p>Across years of travel — boutique retreats in the Caribbean, wellness resorts across the United States, safaris and action-based trips in Africa, city-center properties in Europe — the same gap kept showing up.</p>
-      <p>A romance package inquiry made after hours that never got answered. A group booking lost because no one could clearly explain the accessibility features or dietary accommodations. A remote worker who chose a less beautiful property simply because it confirmed desk space and wifi speed upfront. A package sale that evaporated because two staff members gave conflicting information.</p>
-      <p>None of that was a failure of hospitality. The properties themselves were exceptional. The failure was in the layer underneath — the questions, the hesitations, the after-hours moments that decide whether a booking happens at all, long before a guest ever arrives.</p>
-      <p>Guests choose properties they trust, and that trust starts the moment they land on your website. Improve the communication before the booking, and you improve the trust — and the bookings that follow.</p>
-      <p style="font-family: var(--font-display); font-size: var(--step-2); color: var(--ink); line-height: 1.4;">Concierj exists to close the infrastructure gap underneath the personalized hospitality that makes boutique properties so beloved.</p>
+      <p>Concierj was born out of a love of travel — and a recurring gap in the booking journey.</p>
+      <p>Across boutique hotels, wellness retreats, safari camps, and glamping properties, the same moments kept showing up:</p>
+      <ul class="about-list">
+        <li>A romance package inquiry sent after hours went unanswered.</li>
+        <li>A group hesitated because accessibility and dietary accommodations weren't clear.</li>
+        <li>A remote worker chose a less compelling property because another confirmed desk space and Wi-Fi speed upfront.</li>
+        <li>A package sale fell apart after two staff members gave different answers.</li>
+      </ul>
+      <p>From conversations with hotel teams, we heard the other side of the same problem: limited staff time, crowded shared inboxes, inconsistent information across teams, and the need to stay focused on guests already on property.</p>
+      <p>Concierj exists to bridge that gap — bringing the personalization of great hospitality into the moment before a guest books. It helps properties answer what matters, guide guests toward the right stay, and build trust before arrival — while handling routine questions and bringing hotel staff in when a human touch is actually needed.</p>
     </section>
 
     <section class="founder">
