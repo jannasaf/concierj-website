@@ -350,7 +350,9 @@
   text-align: center;
 }
 .cta-final__inner { display: flex; flex-direction: column; align-items: center; gap: var(--space-m); }
+.cta-final__heading { display: flex; flex-direction: column; align-items: center; gap: var(--space-xs); }
 .cta-final h2 { font-size: var(--step-3); color: var(--paper); }
+.cta-final__sub { font-size: var(--step--1); color: rgba(255, 255, 255, 0.75); }
 .cta-final .btn-on-dark { color: var(--accent-dark); }
 
 /* ---- Footer ---- */
